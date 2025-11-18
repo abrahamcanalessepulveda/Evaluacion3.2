@@ -1,0 +1,54 @@
+<html>
+<head>
+<title>ejercicio2_form.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #d5b778;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bababa;}
+.s3 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+ejercicio2_form.html</font>
+</center></td></tr></table>
+<pre><span class="s0">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s0">&gt;</span>
+<span class="s0">&lt;html </span><span class="s2">lang</span><span class="s3">=&quot;es&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;head&gt;</span>
+    <span class="s0">&lt;meta </span><span class="s2">charset</span><span class="s3">=&quot;UTF-8&quot;</span><span class="s0">&gt;</span>
+    <span class="s0">&lt;title&gt;</span><span class="s1">Ejercicio 2: Nombres</span><span class="s0">&lt;/title&gt;</span>
+    <span class="s0">&lt;link </span><span class="s2">rel</span><span class="s3">=&quot;stylesheet&quot; </span><span class="s2">href</span><span class="s3">=&quot;{{ url_for('static', filename='style.css') }}&quot;</span><span class="s0">&gt;</span>
+<span class="s0">&lt;/head&gt;</span>
+<span class="s0">&lt;body&gt;</span>
+    <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;container&quot;</span><span class="s0">&gt;</span>
+        <span class="s0">&lt;h2&gt;</span><span class="s1">Formulario de Nombres</span><span class="s0">&lt;/h2&gt;</span>
+
+        <span class="s0">&lt;form </span><span class="s2">method</span><span class="s3">=&quot;POST&quot; </span><span class="s2">action</span><span class="s3">=&quot;{{ url_for('ejercicio2') }}&quot;</span><span class="s0">&gt;</span>
+            <span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;nombre1&quot;</span><span class="s0">&gt;</span><span class="s1">Nombre 1:</span><span class="s0">&lt;/label&gt;</span>
+            <span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;text&quot; </span><span class="s2">id</span><span class="s3">=&quot;nombre1&quot; </span><span class="s2">name</span><span class="s3">=&quot;nombre1&quot; </span><span class="s2">required</span><span class="s0">&gt;&lt;br&gt;</span>
+
+            <span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;nombre2&quot;</span><span class="s0">&gt;</span><span class="s1">Nombre 2:</span><span class="s0">&lt;/label&gt;</span>
+            <span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;text&quot; </span><span class="s2">id</span><span class="s3">=&quot;nombre2&quot; </span><span class="s2">name</span><span class="s3">=&quot;nombre2&quot; </span><span class="s2">required</span><span class="s0">&gt;&lt;br&gt;</span>
+
+            <span class="s0">&lt;label </span><span class="s2">for</span><span class="s3">=&quot;nombre3&quot;</span><span class="s0">&gt;</span><span class="s1">Nombre 3:</span><span class="s0">&lt;/label&gt;</span>
+            <span class="s0">&lt;input </span><span class="s2">type</span><span class="s3">=&quot;text&quot; </span><span class="s2">id</span><span class="s3">=&quot;nombre3&quot; </span><span class="s2">name</span><span class="s3">=&quot;nombre3&quot; </span><span class="s2">required</span><span class="s0">&gt;&lt;br&gt;</span>
+
+            <span class="s0">&lt;button </span><span class="s2">type</span><span class="s3">=&quot;submit&quot;</span><span class="s0">&gt;</span><span class="s1">Enviar</span><span class="s0">&lt;/button&gt;</span>
+        <span class="s0">&lt;/form&gt;</span>
+
+        <span class="s1">{% if resultado_nombre %}</span>
+            <span class="s0">&lt;div </span><span class="s2">class</span><span class="s3">=&quot;resultado&quot;</span><span class="s0">&gt;</span>
+                <span class="s0">&lt;p&gt;</span><span class="s1">{{ resultado_nombre }}</span><span class="s0">&lt;/p&gt;</span>
+                <span class="s0">&lt;p&gt;</span><span class="s1">{{ resultado_caracteres }}</span><span class="s0">&lt;/p&gt;</span>
+            <span class="s0">&lt;/div&gt;</span>
+        <span class="s1">{% endif %}</span>
+
+        <span class="s0">&lt;p&gt;&lt;a </span><span class="s2">href</span><span class="s3">=&quot;{{ url_for('index') }}&quot;</span><span class="s0">&gt;</span><span class="s1">Volver al Menú</span><span class="s0">&lt;/a&gt;&lt;/p&gt;</span>
+    <span class="s0">&lt;/div&gt;</span>
+<span class="s0">&lt;/body&gt;</span>
+<span class="s0">&lt;/html&gt;</span></pre>
+</body>
+</html>
